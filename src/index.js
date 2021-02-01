@@ -44,7 +44,7 @@ class Product extends React.Component
     products[idx] = prod;
     console.log('products[idx]  : ', products[idx] );
 
-    this.setState({products : products});
+    this.setState({products : products}, ()=>{this.calculateTotal()});
   }
 
   onReset(){
